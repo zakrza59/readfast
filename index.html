@@ -9,6 +9,22 @@
 </head>
 <body>
   <textarea name="" id="text" cols="30" rows="10"></textarea>
-  <button onclick=""></button>
+  <button onclick="showWords()"></button>
 </body>
+<script>
+function showWords {
+var x = document.getElementById('text');
+var a = "Ala ma kota";
+var s = a.split(" ");
+var i = 0;
+
+(function lool() {
+    console.log(i);
+    x.innerHTML = s[i];
+    if (++i < s.length) {
+        setTimeout(lool, 1000);
+    }
+})();
+}
+</script>
 </html>
