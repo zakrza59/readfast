@@ -1,29 +1,37 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <meta charset="utf-8" />
-  <title>ReadFast</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
-</head>
-<body>
-  <textarea name="" id="text" cols="30" rows="10" value=""></textarea>
-  <button onclick="showWords()">Run!</button>
-  <h1 id="y">Tu ma byc nowy tekst</h1>
-</body>
-<script>
+  <html>
+    <head>
+      <meta charset="utf-8" />
+      <title>ReadFast</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    </head>
+    <body>
+      
+      <div id="fun">
+        <div id="field">
+          <textarea name="" id="text" cols="30" rows="10" value=""></textarea>
+        </div>
+        
+        <div id="reading">  
+          <h1 id="y">Tu ma byc nowy tekst</h1>
+          <button onclick="showWords()">Run!</button>
+        </div>
+      </div>
 
-function showWords() {
-var x = document.getElementById('text').value.split(" "); //to co wpiszesz w textarea
-var p = document.getElementById("y").innerHTML; //h1 tag
-var i = 0;
+    </body>
+    <script>
+      function showWords() {
+        var x = document.getElementById('text').value.split(" "); //to co wpiszesz w textarea
+        var p = document.getElementById("y").innerHTML; //h1 tag
+        var i = 0;
 
-(function lool() {
-  document.getElementById('y').innerHTML = x[i];
-    if (++i < x.length) {
-        setTimeout(lool, 1000);
-    }
-})();
-}
-</script>
-</html>
+        (function looper() {
+          document.getElementById('y').innerHTML = x[i];
+          if (++i < x.length) {
+            setTimeout(looper, 400);
+          }
+        })();
+      }
+    </script>
+  </html>
