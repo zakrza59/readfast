@@ -5,10 +5,14 @@ import './Input.css'
 class Input extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {value: 'Przeczytasz ten tekst szybko'};
+    this.state = {
+      value: 'text2',
+      tekst: ''
+    };
 
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.iterateSenteces = this.iterateSenteces.bind(this);
   }
 
   handleChange(event) {
@@ -20,18 +24,24 @@ class Input extends React.Component {
     event.preventDefault();
   }
 
+  iterateSenteces() {
+    var a = this.state;
+    console.log(a);
+    this.setState({tekst: "setstate działa"})
+  }
+
   render() {
     return (
       <div>
-        <form onSubmit={this.handleSubmit}>
+        <form onSubmit={this.iterateSenteces}>
           <label>
-            Name:
+            Put here your text(text1)
             <input type="text" value={this.state.value} onChange={this.handleChange} />
           </label>
-          <input type="submit" value="Submit" />
+          <input type="submit" value="Run!" />
         </form>
         {/* w tym propsie zrobisz iteracje po wyrazach */}
-        <Read tekst={this.state.value}/> 
+        <Read tekst={this.state.tekst}/> 
       </div>
     );
   }
