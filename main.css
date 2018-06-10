@@ -37,8 +37,8 @@ body {
 
 p {
   margin: 2em 4em;
-  font-family: "Comic Sans MS", cursive, sans-serif	
-
+  font-family: "Comic Sans MS", cursive, sans-serif;
+  color: #ffffffb3;
 }
 
 textarea {
@@ -46,6 +46,7 @@ textarea {
   background-color: #9be6fe;
   border: none;
   border-radius: 2%;
+  color: #e81857;
 }
 
 textarea:focus {
