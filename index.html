@@ -20,7 +20,7 @@
         </div>
         <div class="right-container">
           <h1 id="y">Look here!</h1>
-          <input type="range" min="1" max="100" value="50" class="sliding" id="slider">
+          <input type="range" min="100" max="1000" value="300" class="sliding" id="slider">
           <p>Words per minute: <span id="counter"></span></p>
           <button onclick="showWords()">Run!</button>
         </div>
@@ -29,8 +29,8 @@
     </body>
     <script>
       function showWords() {
-        var x = document.getElementById('text').value.split(" "); //to co wpiszesz w textarea
-        var p = document.getElementById("y").innerHTML; //h1 tag
+        var x = document.getElementById('text').value.split(" ");
+        var p = document.getElementById("y").innerHTML;
         var i = 0;
 
         (function looper() {
