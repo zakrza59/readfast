@@ -21,7 +21,7 @@ body {
 .left-container {
   width: 50%;
   display: flex;
-  flex-flow: row nowrap;
+  flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
   background-color: #1f5768;
@@ -40,6 +40,7 @@ textarea {
   resize: none;
   background-color: #9be6fe;
   border: none;
+  border-radius: 2%;
 }
 
 textarea:focus {

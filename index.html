@@ -7,16 +7,22 @@
       <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
     </head>
     <body>
-        <div class="main-container">
-            <div class="left-container">
-                <textarea background-color="yellow" id="text" cols="50" rows="35" value=""></textarea>
-            </div>
-            <div class="right-container">
-                <h1 id="y">Look here</h1>
-                <button onclick="showWords()">Run!</button>
-            </div>
-            </div>
-        </div>
+      <div class="main-container">
+          <div class="left-container">
+            <p>You usually read at about 300 words per minute, however by removing the need to move your eyes you can easily read much faster. Enter below text or article so You could give it a try!</p>
+            <textarea 
+            placeholer="Enter here text or article so You could try to read it at fast speed" 
+            id="text" 
+            cols="50" 
+            rows="35" 
+            value=""></textarea>            
+          </div>
+          <div class="right-container">
+            <h1 id="y">Look here!</h1>
+            <button onclick="showWords()">Run!</button>
+          </div>
+          </div>
+      </div>
     </body>
     <script>
       function showWords() {
