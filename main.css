@@ -85,3 +85,12 @@ button:hover {
   bottom: 0;
   right: 3px;
 }
+
+#counter-text {
+  margin: 1% 0 2% 0;  
+}
+
+#slider {
+  margin-top: 3%;
+  width: 250px;
+}
