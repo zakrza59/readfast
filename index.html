@@ -36,17 +36,17 @@
         (function looper() {
           document.getElementById('y').innerHTML = x[i];
           if (++i < x.length) {
-            setTimeout(looper, 200);
+            setTimeout(looper, (60000/counter.innerHTML));
           }
         })();
       }
 
       var slider = document.getElementById("slider");
-      var output = document.getElementById("counter");
-      output.innerHTML = slider.value;
+      var counter = document.getElementById("counter");
+      counter.innerHTML = slider.value;
 
       slider.oninput = function() {
-      output.innerHTML = this.value;
+      counter.innerHTML = this.value;
 }
     </script>
   </html>
